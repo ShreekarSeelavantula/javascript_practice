@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        .q_five {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a To-Do List using `onclick` in HTML.</p>
+    <input type="text" placeholder="Enter task" class="q_first">
+    <input type="time" class="q_second">
+    <button class="q_third">Add Task</button>
+
+    <div class="q_four"></div>
+
+    <script>
+        var tasks = [];
+        var times = [];
+
+        function render() {
+            var taskContainer = document.querySelector('.q_four');
+            taskContainer.innerHTML = ""; // Clear previous list
+
+            for (var i = 0; i < tasks.length; i++) {
+                taskContainer.innerHTML += 
+                    "<p class='q_five'>" + tasks[i] + " " + times[i] + "</p> " +
+                    "<button onclick='deleteTask(" + i + ")'>Delete</button><br>";
+            }
+        }
+
+        function addTask() {
+            var task = document.querySelector('.q_first').value;
+            var time = document.querySelector('.q_second').value;
+
+            if (task && time) { // Ensure inputs are not empty
+                tasks.push(task);
+                times.push(time);
+                render();
+            }
+        }
+
+        function deleteTask(index) {
+            tasks.splice(index, 1);
+            times.splice(index, 1);
+            render(); // Re-render after deletion
+        }
+
+        document.querySelector('.q_third').onclick = addTask;
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Type a number which will be incremented by 10" class="q_first" >
+    <button>Click me</button>
+    <p class="q_second"></p>
+
+    <script>
+
+     function main()
+     {
+        let a=document.querySelector('.q_first').value;
+        a+=10;
+        document.querySelector('.q_second').innerHTML=a;
+     }
+
+     
+     document.querySelector('button').onclick=main;
+     
+    </script>
+</body>
+</html>

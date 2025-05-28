@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="type something" class="q_first">
+    <input type="date" class="q_second">
+    <button class="q_third">Add</button>
+    <div class="output"></div>
+
+    <script>
+    let array=[];
+
+   
+        let i;
+        let counter=0;
+    
+    function main(event)
+    {
+        document.querySelector('.output').innerHTML="";
+        
+        let a = document.querySelector('.q_first').value;
+        let b = document.querySelector('.q_second').value;
+
+        array[counter] = {a:a , b:b};
+        counter++;
+
+
+
+        for(i = 0 ; i<=array.length-1 ; i++)
+        {
+            document.querySelector('.output').innerHTML += "<p> "+array[i].a+" "+array[i].b+"</p>";
+        }
+
+
+
+    }
+    
+    
+    
+    document.querySelector('.q_third').onclick=main(event);
+
+
+
+
+
+    </script>
+</body>
+</html>

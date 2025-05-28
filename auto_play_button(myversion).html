@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="q_first">Autoplay</button>
+  <p class="output"></p>
+
+  <button  class="q_second">Reset</button>
+
+<script>
+let buttoncounter , number = 0 , condition ;
+
+// Sleep function to create delay
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+
+async function fun()
+{
+    buttoncounter=1;;
+
+    do{
+        number +=1;
+
+        await sleep(1000);
+        
+        decide_condition();
+
+        document.querySelector('.output').innerHTML = number;
+
+
+    }while(condition);
+
+
+
+}
+
+function decide_condition()
+{
+    if(buttoncounter === 2)
+    {
+        condition = false;
+    }
+    else
+    {
+        condition = true;
+    }
+
+    document.querySelector('.q_second').onclick = function(){
+        condition = false;
+        number = 0;
+        buttoncounter = 2;
+    };
+
+}
+
+
+
+
+
+
+    document.querySelector('.q_first').onclick = fun;
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

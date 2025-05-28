@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="q_first">Autoplay</button>
+    <p class="output">0</p>
+    <button class="q_second">Reset</button>
+
+<script>
+let number = 0;
+let intervalID = null; // To store the interval reference
+
+function fun() {
+    if (intervalID !== null) {
+        return; // Prevent multiple intervals from running
+    }
+
+    intervalID = setInterval(() => {
+        number++;
+        document.querySelector('.output').innerHTML = number;
+    }, 1000);
+}
+
+function stopAndReset() {
+    clearInterval(intervalID); // Stop the counting
+    intervalID = null; // Reset interval reference
+    number = 0;
+    document.querySelector('.output').innerHTML = number;
+}
+
+// Assign event listeners
+document.querySelector('.q_first').onclick = fun;
+document.querySelector('.q_second').onclick = stopAndReset;
+</script>
+
+</body>
+</html>

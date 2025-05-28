@@ -1,0 +1,36 @@
+<!-- so here we did learn two things
+1) one is we learnt how to write html tags inside script tag.
+2)two is we learnt how to print the values of variables in para tags from script tag. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="q_first"></div>
+
+    <button class="hi">click me</button>
+    <p class="bye"></p>
+
+    <script>
+        let a=["first" , "second"]
+        let b = " <p>Yes this is possible because the element vin the array is :"+a[1]+"</p>  <button>Yes This is also Possible </button>";
+       document.querySelector('.q_first').innerHTML = b;
+
+       let c=[
+        {todo: "washing clothes" , date : "01-02-2024"},
+        {todo: "washing clothes" , date : "01-02-2024"},
+        {todo: "washing clothes" , date : "01-02-2024"},
+       ];
+
+       function main()
+       {
+          document.querySelector('.bye').innerHTML = " the arra[0] is "+c[0].todo+" and "+c[0].date;
+       }
+
+    document.querySelector('.hi').onclick=main;
+    </script>
+</body>
+</html>

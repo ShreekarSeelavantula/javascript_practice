@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="q_first">Click Me</button>
+    
+<script>
+    function main() {
+        console.log("🔹 Function 'main()' started executing.");
+
+        let a = true;
+        console.log("✅ Initially, a =", a);
+
+        a = null;  // Changing a to null
+        console.log("⚠️ Now, a is set to:", a);
+
+        if (a === null) {
+            console.log("🚨 'a' is null, so function will return early.");
+            return;  // Stops function execution
+        }
+
+        console.log("🛑 This message will never appear because function has returned.");
+    }
+
+   document.querySelector('.q_first').onclick = main; // ✅ Fixed button click event
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .q_five{
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <p>This is an assgnment regarding the input to array using two arrays and then array to display</p>
+    <input type="text" placeholder="enter any text" class="q_first">
+    <input type="time" class="q_second">
+    <button class="q_third">Add me</button>
+
+    <div class="q_four"></div>
+
+
+
+    <script>
+
+        let a = [] , b = [] , counter=0 , i , j;
+
+        function main(){
+
+            
+                a[counter]=document.querySelector('.q_first').value;
+                b[counter]=document.querySelector('.q_second').value;
+                counter++;
+            
+         //render
+
+            document.querySelector('.q_four').innerHTML="";
+            for(i=0;i<=a.length-1;i++)
+            {
+                document.querySelector('.q_four').innerHTML+="<p class = 'q_six'>  "+a[i]+" "+b[i]+" </p>  <button onclick='next("+i+")' >Delete me</button>";
+
+            }
+        }
+
+        function next( i)
+        {
+
+            a.splice(i, 1);
+            b.splice(i , 1);
+            counter--;
+            
+             //render           
+            document.querySelector('.q_four').innerHTML="";
+            for(i=0;i<=a.length-1;i++)
+            {
+                document.querySelector('.q_four').innerHTML+="<p class = 'q_six'>  "+a[i]+" "+b[i]+" </p>  <button onclick='next("+i+")' >Delete me</button>";
+
+            }
+
+            
+        }
+
+
+     document.querySelector('.q_third').onclick=main;
+     
+
+    </script>
+</body>
+</html>

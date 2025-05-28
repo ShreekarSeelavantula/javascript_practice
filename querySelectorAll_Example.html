@@ -1,0 +1,69 @@
+Code for 5 Buttons with Click Event
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button Click Event</title>
+</head>
+<body>
+
+    <!-- Five buttons with the same class -->
+    <button class="js-add-to-cart">Add to Cart 1</button>
+    <button class="js-add-to-cart">Add to Cart 2</button>
+    <button class="js-add-to-cart">Add to Cart 3</button>
+    <button class="js-add-to-cart">Add to Cart 4</button>
+    <button class="js-add-to-cart">Add to Cart 5</button>
+
+    <script>
+        // Select all buttons with class 'js-add-to-cart'
+        let buttons = document.querySelectorAll('.js-add-to-cart');
+
+        // Loop through each button and add a click event listener
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener('click', () => {
+                console.log('Added product ' + (i + 1));
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+<!-- 
+🔍 Explanation
+HTML Structure:
+
+There are five <button> elements.
+Each button has the same class: .js-add-to-cart.
+JavaScript:
+
+document.querySelectorAll('.js-add-to-cart') selects all buttons.
+The for loop iterates over the NodeList of buttons.
+buttons[i].addEventListener('click', () => { ... }) adds a click event listener to each button.
+When a button is clicked, it logs:
+plaintext
+Copy
+Edit
+Added product 1
+Added product 2
+Added product 3
+Added product 4
+Added product 5
+Based on which button was clicked.
+🛠 Example Output in Console
+If you click Button 3, the console will show:
+
+plaintext
+Copy
+Edit
+Added product 3
+If you click Button 5, the console will show:
+
+plaintext
+Copy
+Edit
+Added product 5 -->

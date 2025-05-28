@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button class="q_first">Subscribe</button>
+    
+    <script>
+
+  function main()
+   {
+
+    let a = document.querySelector('.q_first').innerHTML;
+     if( a === "Subscribe")
+     {
+        a="Subs-Cribed"
+        document.querySelector('.q_first').innerHTML=a;
+     }
+
+   }
+
+   document.querySelector('.q_first').onclick=main;
+      
+       
+
+
+
+
+
+    </script>
+</html>

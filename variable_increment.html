@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #one1{
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <button  id="one">Click Me to Show on the Console</button>
+    <button id="two">Add 1</button>
+    <button id="three">Add 2</button>
+    <button  id="four">Reset</button>
+
+    <p id="one1"></p>
+
+<script>
+  document.getElementById('one').onclick=one;
+  document.getElementById('two').onclick=two;
+  document.getElementById('three').onclick=three;
+  document.getElementById('four').onclick=four;
+  
+
+
+  let a=0;
+
+  function one(){
+
+    console.log("The value of a is:"+a);
+    document.getElementById('one1').innerHTML=a;
+
+  }
+  
+  function two()
+  {
+    a++;
+    console.log("The value of a is:"+a);
+
+
+  }
+
+  function three()
+  {
+    a+=2;
+    console.log("The value of a is:"+a);
+
+  }
+
+  function four()
+  {
+    a=0;
+    console.log("The value of a is:"+a);
+
+  }
+
+
+
+
+
+</script>
+</body>
+</html>
