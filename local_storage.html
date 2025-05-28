@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    let object1 = {
+        name : "shreekar",
+        age : 20,
+        isStudent : true
+    }
+
+    console.log(object1);
+
+    let object2_Json = JSON.stringify(object1);
+    console.log(object2_Json);
+
+    localStorage.setItem("userProfile" , object2_Json);
+
+    let object3_localStorage = localStorage.getItem("userProfile");
+    console.log(object3_localStorage);
+
+
+    // updating the user's age in local storage
+    let object4 = JSON.parse(localStorage.userProfile);
+    object4.age = 21;
+
+    console.log(object4);
+
+    localStorage.removeItem("userProfile");
+    console.log(localStorage);
+
+    localStorage.setItem("userProfile" , JSON.stringify(object4));
+    console.log(localStorage);
+
+
+    update("userProfile" , "age" , 30);
+
+function update( json_name , key , value){
+   let  object =  JSON.parse(localStorage.getItem(json_name));
+   object[key] = value;
+   localStorage.setItem(json_name,JSON.stringify(object));
+     console.log(localStorage);
+}
+
+
+</script>
+
+
+</body>
+</html>
