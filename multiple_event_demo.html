@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Multiple Events</title>
+  <style>
+    .btn {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: lightblue;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: skyblue;
+    }
+    .highlight {
+      background-color: gold !important;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="btn">Click Me</button>
+  <p class="count">Count: 0</p>
+  <p class="key">Key pressed: None</p>
+
+  <script>
+    let count = 0;
+    const button = document.querySelector(".btn");
+    const countDisplay = document.querySelector(".count");
+    const keyDisplay = document.querySelector(".key");
+
+    // 🔹 Click event: increment counter
+    button.addEventListener("click", function (event) {
+      count++;
+      countDisplay.innerText = `Count: ${count}`;
+    });
+
+    // 🔹 Double click event: reset counter
+    button.addEventListener("dblclick", function (event) {
+      count = 0;
+      countDisplay.innerText = `Count: ${count} and ${event.target.innerText}`;
+    });
+
+    // 🔹 Mouse over: highlight
+    button.addEventListener("mouseover", function () {
+      button.classList.add("highlight");
+    });
+
+    // 🔹 Mouse out: remove highlight
+    button.addEventListener("mouseout", function () {
+      button.classList.remove("highlight");
+    });
+
+    // 🔹 Key down (on document): show key
+    document.addEventListener("keydown", function (event) {
+      keyDisplay.innerText = `Key pressed: ${event.target}`;
+    });
+  </script>
+
+</body>
+</html>

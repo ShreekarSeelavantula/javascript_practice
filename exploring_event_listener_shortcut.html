@@ -29,12 +29,12 @@
     <script>
 
 
-   document.querySelector(".q_second").addEventListener("click" ,display);
+   document.querySelector(".q_first").addEventListener("keydown" ,display);
 
    function display()
    {
 
-     document.querySelector(".q_third").value = document.querySelector(".q_first").value;
+     console.log(document.querySelector(".q_first").value);
 
    }
 

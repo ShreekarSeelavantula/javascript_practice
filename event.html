@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button class="q_first" >Add 1</button>
+    <p class="q_second"></p>
+    <script>
+
+      let a = document.querySelector(".q_first");
+      a.addEventListener("click" ,display);
+
+      function display(event)
+      {
+          console.log(event.target.innerHTML);
+      }
+       
+    </script>
+</body>
+</html>
