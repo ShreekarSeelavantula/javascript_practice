@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       .q_first{
+        color: white;
+        background-color: black;
+        border-radius: 15px;
+        padding: 7px 9px 7px 9px;
+        border-style: solid;
+       }
+    </style>
+</head>
+<body>
+<p>Its a practice</p>
+<button class="q_first" >Subscribe</button>
+
+
+
+
+
+    <script>
+     let a = document.querySelector(".q_first");
+      a.addEventListener("click",change);
+      function change(){
+         if(a.innerHTML === "Subscribe" )
+         {
+            a.innerHTML = `Subscribed`;
+         }
+         else{
+            a.innerHTML = `Subscribe`;
+
+         }
+      }
+
+    </script>
+</body>
+</html>
