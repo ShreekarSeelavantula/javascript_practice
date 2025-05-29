@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            border-style: solid;
+            border-width: 1.5px;
+        }
+
+        .q_zero{
+            display: flex;
+            flex-direction: column;
+             width: 500px;
+           
+             margin-left: 300px;
+           
+        }
+
+        .q_first ,.w_first{
+            flex: 1fr;
+            display: flex;
+            flex-direction: row;
+            width: 500px;         
+        }
+
+        .w_first {
+            margin-left: 300px;
+            margin-top: 150px;       
+         }
+
+        .q_second , .w_second{
+            flex: 2;
+            height: 50px;
+        }
+         .q_third , .w_third{
+            flex: 1;
+            height: 50px;
+
+        }
+         .q_four , .w_four{
+            flex: 1;
+            height: 50px;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="w_first">
+            <div class="w_second"><p style=" margin-left: 10px; font-weight: 700;">Tasks</p></div>
+            <div class="w_third"><p  style=" margin-left: 10px; font-weight: 700;">DeadLine</p></div>
+            <div class="w_four"><p style=" margin-left: 10px;  font-weight: 700;">Status</p></div>
+            <div class="w_four"><p style=" margin-left: 10px;  font-weight: 700;">Button</p></div>
+
+        </div>
+    <div class="q_zero">
+        
+    </div>
+
+
+    <script>
+        document.querySelector(".q_zero").innerHTML = `
+        <div class="q_first">
+            <div class="q_second"><input type="text"  style=" margin-left: 10px;margin-top: 8px;"></div>
+            <div class="q_third"><input type="time"  style=" margin-left: 2px; margin-top: 8px;"></div>
+            <div class="q_four"><input type="checkbox"  style=" margin-left: 20px; margin-top: 12px; height: 30x; width: 30px;"></div>
+            <div class="q_four"><button  class = "button_class" style=" margin-left: 10px;margin-top: 8px;">Delete</button></div>
+
+        </div>
+        `;
+
+     document.querySelector(".button_class")
+    </script>
+</body>
+</html>
