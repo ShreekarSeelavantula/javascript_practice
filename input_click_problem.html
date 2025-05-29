@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  class="q_first"  type="text" placeholder="type some thing here as an input and i will display later to you">
+   <button class="q_two">Click Me For Output</button>
+<script>
+  
+    let b = document.querySelector(".q_two");
+
+    b.addEventListener("click" , display);
+
+    function display(){
+          
+        document.querySelector(".q_first").innerHTML = document.querySelector(".q_first").value;
+        console.log(document.querySelector(".q_first").value);
+    }
+
+    
+
+</script>
+</body>
+</html>
