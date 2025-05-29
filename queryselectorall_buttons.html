@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .q_first{
+            color: white;
+            background-color: rgb(247, 68, 68);
+            padding: 7px 9px 7px 9px;
+            border-radius: 15px;
+            border-style: solid;
+            border-color: rgb(247, 68, 68);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <button class="q_first">Add 1</button>
+    <button class="q_first">Add 1</button>
+    <button class="q_first">Add 1</button>
+    <button class="q_first">Add 1</button>
+    <button class="q_first">Add 1</button>
+    <button class="q_first">Add 1</button>
+
+
+    <script>
+        let b = 1;
+   let a = document.querySelectorAll(".q_first");
+   for(let i = 0 ; i<=(a.length-1);i++)
+   {
+    a[i].addEventListener("click" , () => {a[i].innerHTML =`Add ${b++}` });
+   }
+
+
+    </script>
+
+</body>
+</html>
