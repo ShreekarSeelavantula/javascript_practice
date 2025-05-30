@@ -14,8 +14,7 @@
         .q_zero{
             display: flex;
             flex-direction: column;
-             width: 500px;
-           
+             width: 500px;          
              margin-left: 300px;
            
         }
@@ -29,7 +28,7 @@
 
         .w_first {
             margin-left: 300px;
-            margin-top: 150px;       
+            margin-top: 50px;       
          }
 
         .q_second , .w_second{
@@ -45,16 +44,72 @@
             flex: 1;
             height: 50px;
        }
+
+       .e_first{
+        display: flex;
+        flex-direction: row;
+        width: 500px;
+        height: 70px;
+        margin-top: 100px;
+        margin-left: 300px;
+       }
+
+       .e_second {
+        flex: 2;
+       }
+
+       .e_third , .e_four{
+          flex: 1;
+       }
+
+       .e_second input {
+        width: 200px;
+        height: 30px;
+        margin-left: 10px;
+        margin-top: 15px;
+        font-size: 18px;
+
+       }
+
+       .e_third input {
+         width: 120px;
+        height: 30px;
+        margin-left: 4px;
+        margin-top: 15px;
+    
+       }
+
+       .e_four button{
+        font-size: 15px;
+        border-radius: 8px;
+        padding: 7px 25px 7px 25px;
+        margin-top: 16px;
+        margin-left: 15px;
+        border-style: solid;
+        background-color: rgb(8, 176, 243);
+        color: white;
+        border-color: rgb(8, 176, 243);
+        
+        
+          
+       }
+
     </style>
 </head>
 <body>
+
+    <div class="e_first">
+        <div class="e_second"> <input type="text" placeholder="Enter the tasks"></div>
+        <div class="e_third"><input type="date"></div>
+        <div class=e_four ><button>Add</button></div>
+    </div>
+    
 
     <div class="w_first">
             <div class="w_second"><p style=" margin-left: 10px; font-weight: 700;">Tasks</p></div>
             <div class="w_third"><p  style=" margin-left: 10px; font-weight: 700;">DeadLine</p></div>
             <div class="w_four"><p style=" margin-left: 10px;  font-weight: 700;">Status</p></div>
             <div class="w_four"><p style=" margin-left: 10px;  font-weight: 700;">Button</p></div>
-
         </div>
     <div class="q_zero">
         
