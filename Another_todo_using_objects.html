@@ -118,14 +118,13 @@
 
     <script>
        let r = document.querySelector(".q_zero");
-       let e = document.querySelector(".add_button");
        let input_array = [] , date_array = [];
        let string = ` `;
 
 
      
 
-        e.addEventListener( "click",()=>{
+        document.querySelector(".add_button").addEventListener( "click",()=>{
    
            
 
@@ -176,13 +175,11 @@ function check_delete(){
 
             input_array.splice(j,1);
             date_array.splice(j,1);
-
-        
-
+            display();
 
            });
         }
-         display();
+        
        
     }  
 
