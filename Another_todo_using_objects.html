@@ -99,9 +99,9 @@
 <body>
 
     <div class="e_first">
-        <div class="e_second"> <input type="text" placeholder="Enter the tasks"></div>
-        <div class="e_third"><input type="date"></div>
-        <div class=e_four ><button>Add</button></div>
+        <div class="e_second"> <input class="input_bar" type="text" placeholder="Enter the tasks"></div>
+        <div class="e_third"><input  class="date_bar" type="date"></div>
+        <div class=e_four ><button class="add_button">Add</button></div>
     </div>
     
 
@@ -117,17 +117,75 @@
 
 
     <script>
-        document.querySelector(".q_zero").innerHTML = `
+       let r = document.querySelector(".q_zero");
+       let e = document.querySelector(".add_button");
+       let input_array = [] , date_array = [];
+       let string = ` `;
+
+
+     
+
+        e.addEventListener( "click",()=>{
+   
+           
+
+        input_array.push( document.querySelector(".input_bar").value );
+        date_array.push( document.querySelector(".date_bar").value );
+
+
+        display();
+        
+            
+     
+        } )
+
+
+
+      function display()
+      {
+
+        string = ` `;
+        for( let i=0 ; i<input_array.length ; i++) {
+      string += `
         <div class="q_first">
-            <div class="q_second"><input type="text"  style=" margin-left: 10px;margin-top: 8px;"></div>
-            <div class="q_third"><input type="time"  style=" margin-left: 2px; margin-top: 8px;"></div>
+            <div class="q_second"><p style=" margin-left: 10px;margin-top: 8px;">${input_array[i]}</p></div>
+            <div class="q_third"><p style=" margin-left: 2px; margin-top: 8px;"> </p>${date_array[i]}</div>
             <div class="q_four"><input type="checkbox"  style=" margin-left: 20px; margin-top: 12px; height: 30x; width: 30px;"></div>
             <div class="q_four"><button  class = "button_class" style=" margin-left: 10px;margin-top: 8px;">Delete</button></div>
 
         </div>
         `;
+        r.innerHTML = string;
 
-     document.querySelector(".button_class")
+        check_delete();
+                                                    }
+      }
+
+
+
+
+
+       
+function check_delete(){
+
+       let delete_button = document.querySelectorAll(".button_class");
+
+        for(let j=0;j<delete_button.length;j++)
+        {
+           delete_button[j].addEventListener( "click", ()=>{
+
+            input_array.splice(j,1);
+            date_array.splice(j,1);
+
+        
+
+
+           });
+        }
+         display();
+       
+    }  
+
     </script>
 </body>
 </html>
