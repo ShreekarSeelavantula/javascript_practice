@@ -171,18 +171,26 @@ function check_delete(){
 
         for(let j=0;j<delete_button.length;j++)
         {
-           delete_button[j].addEventListener( "click", ()=>{
-
-            input_array.splice(j,1);
-            date_array.splice(j,1);
-            display();
-
-           });
+           delete_button[j].addEventListener( "click", () =>
+        {
+            actual_display(j);
+        });
         }
         
        
     }  
 
+
+    function actual_display( j )
+    {
+        
+
+            input_array.splice(j,1);
+            date_array.splice(j,1);
+            display();
+
+           
+    }
     </script>
 </body>
 </html>
